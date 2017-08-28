@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YVn-GW-cmo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather-icon-png-16.png" translatesAutoresizingMaskIntoConstraints="NO" id="jsl-Np-Ivc">
+                                <rect key="frame" x="63.5" y="148" width="193" height="272"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="UfG-q4-gDO"/>
+                                    <constraint firstAttribute="height" constant="272" id="ndM-Wv-3k0"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jsl-Np-Ivc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5iz-yI-QPp"/>
+                            <constraint firstItem="jsl-Np-Ivc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ayg-k6-nlR"/>
+                            <constraint firstItem="jsl-Np-Ivc" firstAttribute="centerY" secondItem="YVn-GW-cmo" secondAttribute="centerY" id="G2E-Cv-bcR"/>
+                            <constraint firstItem="jsl-Np-Ivc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="N85-8w-4cW"/>
+                            <constraint firstItem="jsl-Np-Ivc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Q4x-0m-sHb"/>
+                            <constraint firstItem="YVn-GW-cmo" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Rod-0J-7MP"/>
+                            <constraint firstItem="jsl-Np-Ivc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="dS9-WD-Rcp"/>
+                            <constraint firstAttribute="trailing" secondItem="YVn-GW-cmo" secondAttribute="trailing" id="oh0-o8-Niw"/>
+                            <constraint firstItem="YVn-GW-cmo" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="p6x-n6-mLR"/>
+                            <constraint firstItem="jsl-Np-Ivc" firstAttribute="centerX" secondItem="YVn-GW-cmo" secondAttribute="centerX" id="qM3-7B-Ge5"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="YVn-GW-cmo" secondAttribute="bottom" id="rEu-mY-LJw"/>
+                            <constraint firstItem="jsl-Np-Ivc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="u2w-hJ-5j1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background_1.jpg" width="640" height="1136"/>
+        <image name="weather-icon-png-16.png" width="512" height="512"/>
+    </resources>
+</document>
