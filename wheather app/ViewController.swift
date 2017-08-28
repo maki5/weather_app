@@ -17,14 +17,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
     var currentLat = ""
     var currentLong = ""
     var upcoming_weather = Dictionary<String, Any>()
+    var activityIndicator: ActivityIndicator? = nil
     
-    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var locationButton: UIBarButtonItem!
     
     @IBAction func resetLocation(_ sender: Any) {
-        activityIndicator.startAnimating()
+        activityIndicator?.show()
         
         let defaults = UserDefaults.standard
         defaults.set("", forKey: "current_location")
@@ -34,19 +34,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         
-        activityIndicator.stopAnimating()
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        activityIndicator.center = self.view.center
-        activityIndicator.startAnimating()
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        view.addSubview(activityIndicator)
         
-        activityIndicator.startAnimating()
+        activityIndicator = ActivityIndicator(view: self.view)
         
         tableView.backgroundView = nil
         tableView.backgroundColor = UIColor.clear
@@ -54,6 +50,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
         let attributes = [NSFontAttributeName: UIFont.fontAwesome(ofSize: 20)] as [String: Any]
         locationButton.setTitleTextAttributes(attributes, for: .normal)
         locationButton.title = String.fontAwesomeIcon(code: "fa-location-arrow")
+        
+        activityIndicator?.show()
         
         let defaults = UserDefaults.standard
         if let currentLocation = defaults.value(forKey: "current_location") as? String {
@@ -72,9 +70,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
                 
                 parseResult(result: current_weather)
             }
-
-            activityIndicator.stopAnimating()
-            activityIndicator.isHidden = true
         } else {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -84,6 +79,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
             image.image = UIImage(named: "img/background_2.jpg")
             
         }
+        
     }
 
     @IBOutlet var label: UILabel!
@@ -108,9 +104,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
                 
                 parseResult(result: result)
                 tableView.reloadData()
-                activityIndicator.stopAnimating()
+                
             }
         }
+        activityIndicator?.hide()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

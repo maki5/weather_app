@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20234F1D1F548A6C00F0306D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20234F1C1F548A6C00F0306D /* ActivityIndicator.swift */; };
 		203190391F388B0000A91E0E /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203190381F388B0000A91E0E /* WeatherCell.swift */; };
 		203A86E41F0285B600348C23 /* img in Resources */ = {isa = PBXBuildFile; fileRef = 203A86E31F0285B600348C23 /* img */; };
 		2041BD5D1F3B2D3E00192F44 /* FontAwesome_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2041BD5C1F3B2D3E00192F44 /* FontAwesome_swift.framework */; };
@@ -18,6 +19,7 @@
 		20BEE9491EFBD44E005D5DA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BEE9471EFBD44E005D5DA7 /* LaunchScreen.storyboard */; };
 		20BEE9511EFC6668005D5DA7 /* background_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20BEE9501EFC6668005D5DA7 /* background_1.jpg */; };
 		20BEE9531EFC67CF005D5DA7 /* weather-icon-png-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BEE9521EFC67CF005D5DA7 /* weather-icon-png-16.png */; };
+		20D45C471F549A27004E3486 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D45C461F549A27004E3486 /* UIColor.swift */; };
 		20F7EA581F04E331003BFC23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F7EA571F04E331003BFC23 /* Images.xcassets */; };
 		20F7EA5A1F04EF91003BFC23 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7EA591F04EF91003BFC23 /* LocationViewController.swift */; };
 		20F7EA5C1F052D2E003BFC23 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F7EA5B1F052D2E003BFC23 /* WeatherService.swift */; };
@@ -27,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		06AEA02E374F767D5BD4203A /* Pods-wheather app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wheather app.debug.xcconfig"; path = "wheather app/Pods/Target Support Files/Pods-wheather app/Pods-wheather app.debug.xcconfig"; sourceTree = "<group>"; };
+		20234F1C1F548A6C00F0306D /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		203190381F388B0000A91E0E /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		203A86E31F0285B600348C23 /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; path = img; sourceTree = "<group>"; };
 		2041BD5C1F3B2D3E00192F44 /* FontAwesome_swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesome_swift.framework; path = "../../../Library/Developer/Xcode/DerivedData/wheather_app-bvpesfpkzapzofgffxfjvevjaahc/Build/Products/Debug-iphonesimulator/FontAwesome.swift/FontAwesome_swift.framework"; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		20BEE94A1EFBD44E005D5DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20BEE9501EFC6668005D5DA7 /* background_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background_1.jpg; path = "../../../../Downloads/assets/assets3/backgrounds/set 1/background_1.jpg"; sourceTree = "<group>"; };
 		20BEE9521EFC67CF005D5DA7 /* weather-icon-png-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "weather-icon-png-16.png"; path = "../../../../Downloads/weather-icon-png-16.png"; sourceTree = "<group>"; };
+		20D45C461F549A27004E3486 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		20F7EA571F04E331003BFC23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		20F7EA591F04EF91003BFC23 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		20F7EA5B1F052D2E003BFC23 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 				20BEE9521EFC67CF005D5DA7 /* weather-icon-png-16.png */,
 				20BEE93B1EFBD44E005D5DA7 /* AppDelegate.swift */,
 				20BEE93D1EFBD44E005D5DA7 /* ViewController.swift */,
+				20234F1C1F548A6C00F0306D /* ActivityIndicator.swift */,
 				20F7EA591F04EF91003BFC23 /* LocationViewController.swift */,
 				20BEE93F1EFBD44E005D5DA7 /* Main.storyboard */,
 				20BEE9471EFBD44E005D5DA7 /* LaunchScreen.storyboard */,
@@ -97,6 +102,7 @@
 				20F7EA5D1F052E6B003BFC23 /* LocationService.swift */,
 				203190381F388B0000A91E0E /* WeatherCell.swift */,
 				205703081F3B1FBC00123322 /* Podfile */,
+				20D45C461F549A27004E3486 /* UIColor.swift */,
 			);
 			path = "wheather app";
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 				20BEE93E1EFBD44E005D5DA7 /* ViewController.swift in Sources */,
 				20BEE9441EFBD44E005D5DA7 /* wheather_app.xcdatamodeld in Sources */,
 				20BEE93C1EFBD44E005D5DA7 /* AppDelegate.swift in Sources */,
+				20D45C471F549A27004E3486 /* UIColor.swift in Sources */,
+				20234F1D1F548A6C00F0306D /* ActivityIndicator.swift in Sources */,
 				20F7EA5E1F052E6B003BFC23 /* LocationService.swift in Sources */,
 				20F7EA5A1F04EF91003BFC23 /* LocationViewController.swift in Sources */,
 				203190391F388B0000A91E0E /* WeatherCell.swift in Sources */,
