@@ -62,13 +62,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
                 locationManager.requestLocation()
                 label.text = ""
                 image.image = UIImage(named: "img/background_2.jpg")
-                
+            
             } else {
                 let weatherService = WeatherService()
                 let current_weather = weatherService.getWeather(location: currentLocation)
                 upcoming_weather = weatherService.getDaily(location: currentLocation)
                 
                 parseResult(result: current_weather)
+            
             }
         } else {
             locationManager.delegate = self
