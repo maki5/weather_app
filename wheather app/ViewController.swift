@@ -149,7 +149,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
         cell.dateLabel.text = dateString
         cell.weatherLabel.text = weather
         cell.tempLabel.text = String(describing: parsedTemp).appending("˚C")
-
+        
+        activityIndicator?.hide()
         return cell
     }
     

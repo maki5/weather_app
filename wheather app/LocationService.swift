@@ -14,7 +14,10 @@ class LocationService {
         var result = [String]()
         let semaphore = DispatchSemaphore(value: 0)
         
-        let url = URL(string: "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(name)&types=(regions)&key=AIzaSyCnEcJiep5cPfD1UGrojLyqB9TUO3SrjrA")
+        
+        let urlStr = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(name)&types=(regions)&key=AIzaSyCnEcJiep5cPfD1UGrojLyqB9TUO3SrjrA"
+        
+        let url = URL(string: urlStr.addingPercentEscapes(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!)
         
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error != nil {

@@ -75,7 +75,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate, UITab
     
     
     func updateSearchResults(for searchController: UISearchController) {
-        if searchController.searchBar.text! != "" {
+        if searchController.searchBar.text! != "" && searchController.searchBar.text != nil {
             filteredCities = []
             filteredCities = locationService.getLocation(name: searchController.searchBar.text!)
         }
