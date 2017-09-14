@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OTC-s3-WFL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OTC-s3-WFL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="198"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9Q-AA-nwM">
                                 <rect key="frame" x="0.0" y="579" width="375" height="44"/>
@@ -41,11 +41,11 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HgQ-hA-0hu">
-                                <rect key="frame" x="0.0" y="158" width="375" height="422"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HgQ-hA-0hu">
+                                <rect key="frame" x="0.0" y="195" width="375" height="385"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="0.79252347239999998" green="1" blue="0.44465478899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ZLr-jx-uMV" customClass="WeatherCell" customModule="wheather_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -55,24 +55,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7M-yx-Vkh">
-                                                    <rect key="frame" x="8" y="15" width="359" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="0.99246269464492798" green="0.97646790742874146" blue="0.97616738080978394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="8" y="12" width="359" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZp-Bq-8Gq">
-                                                    <rect key="frame" x="335" y="15" width="32" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="0.99246269464492798" green="0.97646790742874146" blue="0.97616738080978394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="331" y="12" width="36" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NM1-md-mwo">
-                                                    <rect key="frame" x="189" y="15" width="95" height="15"/>
+                                                    <rect key="frame" x="185" y="12" width="95" height="19.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="95" id="OwG-M9-6CB"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="0.99246269464492798" green="0.97646790742874146" blue="0.97616738080978394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -86,7 +86,6 @@
                                                 <constraint firstItem="tZp-Bq-8Gq" firstAttribute="leading" secondItem="NM1-md-mwo" secondAttribute="trailing" constant="51" id="w3X-Q7-WD3"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="dateLabel" destination="i7M-yx-Vkh" id="g9Z-fK-vV3"/>
                                             <outlet property="tempLabel" destination="tZp-Bq-8Gq" id="GDm-XN-Fa2"/>
@@ -99,7 +98,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="AAj-45-vVQ"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Desc label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="xU7-je-rJg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="xU7-je-rJg">
                                 <rect key="frame" x="16" y="94" width="343" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="0.99242693185806274" green="0.97624737024307251" blue="0.9884142279624939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -111,21 +110,22 @@
                             <constraint firstAttribute="trailing" secondItem="OTC-s3-WFL" secondAttribute="trailing" id="0Sd-my-iyS"/>
                             <constraint firstAttribute="trailing" secondItem="OTC-s3-WFL" secondAttribute="trailing" id="1SX-Ec-bNr"/>
                             <constraint firstItem="W9Q-AA-nwM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5CC-OB-k72"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OTC-s3-WFL" secondAttribute="bottom" id="5pV-9Y-9MO"/>
-                            <constraint firstItem="HgQ-hA-0hu" firstAttribute="top" secondItem="xU7-je-rJg" secondAttribute="bottom" constant="37.5" id="66A-Gb-pdI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OTC-s3-WFL" secondAttribute="bottom" constant="425" id="5pV-9Y-9MO"/>
+                            <constraint firstAttribute="trailing" secondItem="OTC-s3-WFL" secondAttribute="trailing" id="9YR-Zb-qph"/>
+                            <constraint firstItem="OTC-s3-WFL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CCV-KY-ibx"/>
                             <constraint firstItem="OTC-s3-WFL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CwB-50-x7Z"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W9Q-AA-nwM" secondAttribute="bottom" id="DnX-bs-ZTH"/>
                             <constraint firstItem="OTC-s3-WFL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="G8V-qR-w4Y"/>
                             <constraint firstAttribute="trailing" secondItem="HgQ-hA-0hu" secondAttribute="trailing" id="Z6x-oY-Ljd"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OTC-s3-WFL" secondAttribute="bottom" id="b19-5d-WFy"/>
                             <constraint firstItem="xU7-je-rJg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bHg-ZP-PGR"/>
+                            <constraint firstItem="HgQ-hA-0hu" firstAttribute="top" secondItem="OTC-s3-WFL" secondAttribute="bottom" constant="-3" id="ckY-DL-shN"/>
                             <constraint firstItem="OTC-s3-WFL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gse-iW-9mB"/>
                             <constraint firstItem="HgQ-hA-0hu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hP0-4v-jkX"/>
                             <constraint firstAttribute="trailing" secondItem="OTC-s3-WFL" secondAttribute="trailing" id="hxZ-gA-bIK"/>
                             <constraint firstItem="OTC-s3-WFL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jdU-FV-pRU"/>
-                            <constraint firstItem="OTC-s3-WFL" firstAttribute="top" secondItem="xU7-je-rJg" secondAttribute="bottom" constant="-156.5" id="nXQ-nJ-iO5"/>
+                            <constraint firstItem="OTC-s3-WFL" firstAttribute="top" secondItem="xU7-je-rJg" secondAttribute="bottom" constant="-120.5" id="nXQ-nJ-iO5"/>
                             <constraint firstItem="xU7-je-rJg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nhh-ly-phN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OTC-s3-WFL" secondAttribute="bottom" id="oUM-ok-ld5"/>
+                            <constraint firstItem="OTC-s3-WFL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qPN-kd-3B2"/>
                             <constraint firstItem="W9Q-AA-nwM" firstAttribute="top" secondItem="HgQ-hA-0hu" secondAttribute="bottom" constant="-1" id="r8i-WO-1fS"/>
                             <constraint firstAttribute="trailing" secondItem="W9Q-AA-nwM" secondAttribute="trailing" id="x2f-qM-18O"/>
                         </constraints>

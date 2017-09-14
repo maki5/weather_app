@@ -44,8 +44,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
         
         activityIndicator = ActivityIndicator(view: self.view)
         
-        tableView.backgroundView = nil
-        tableView.backgroundColor = UIColor.clear
+        tableView.backgroundColor = UIColor.lightGray
         
         let attributes = [NSFontAttributeName: UIFont.fontAwesome(ofSize: 20)] as [String: Any]
         locationButton.setTitleTextAttributes(attributes, for: .normal)
@@ -164,6 +163,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
         
     }
 
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+    }
     
     
     func parseResult(result :Dictionary<String, String>){
@@ -171,7 +173,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
             
             
             guard let temp = result["temp"],
-                let description = result["description"],
+                var description = result["description"],
                 var wId = result["wId"],
                 let city = result["city"],
                 let country = result["country"]
@@ -182,24 +184,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
             }
             
             
-            let validTemp = Int(Double(temp)!)
-            let resultStr = description + "\n" + String(validTemp) + "°" + "\n" + city + ", " + country
-            label.text = resultStr
-            
             let index = wId.index(wId.startIndex, offsetBy: 1)
             wId = wId.substring(to: index)
             
             
             var imgId = ""
             
+            
             if Int(wId) == 2 {
                 imgId = "200.jpg"
+                description = "Thunderstorm"
             } else if Int(wId) == 3 {
                 imgId = "300.jpg"
+                description = "Drizzle"
             } else if Int(wId) == 5 {
                 imgId = "500.jpg"
+                description = "Rain"
             } else if Int(wId) == 6 {
                 imgId = "600.jpg"
+                description = "Snow"
             } else if Int(wId) == 7 {
                 imgId = "700.jpg"
             } else if Int(wId) == 8 {
@@ -211,10 +214,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
             if imgId != "" || imgId == "900.jpg" || imgId == "800" {
                 if result["wId"] == "801" {
                     imgId = "801.jpg"
+                    description = "Clouds"
                 } else if result["wId"] == "901" {
                     imgId = "901.jpg"
                 }
             }
+            
+            let validTemp = Int(Double(temp)!)
+            let resultStr = description + "\n" + String(validTemp) + "°" + "\n" + city + ", " + country
+            label.text = resultStr
             
             image.image = UIImage(named: "img/\(imgId)")
         }
